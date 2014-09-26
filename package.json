@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "react and browserify page placeholder",
   "scripts": {
-    "build": "NODE_ENV=production browserify -t coffeeify --extension='.coffee' src/main.coffee | uglifyjs -cm > public/scripts.js",
+    "build": "NODE_ENV=production node_modules/.bin/browserify -t coffeeify --extension='.coffee' src/main.coffee | node_modules/.bin/uglifyjs -cm > public/scripts.js",
     "start": "node server.js"
   },
   "dependencies": {
